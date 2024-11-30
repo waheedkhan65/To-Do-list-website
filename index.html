@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickTask - To-Do List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Welcome Screen -->
+    <div id="welcome-screen" class="screen">
+        <h1>Welcome to QuickTask</h1>
+        <button onclick="showApp()">Get Started</button>
+    </div>
+
+    <!-- To-Do List Screen -->
+    <div id="app-screen" class="screen hidden">
+        <header>
+            <h1>QuickTask</h1>
+            <div id="datetime">
+                <p id="date"></p>
+                <p id="time"></p>
+            </div>
+        </header>
+        <main>
+            <!-- Input for Adding Tasks -->
+            <div class="input-container">
+                <input type="text" id="task-input" placeholder="Add a new task...">
+                <input type="date" id="task-date" placeholder="Select a date (optional)">
+                <input type="time" id="task-time" placeholder="Select a time (optional)">
+                <button onclick="addTask()">Add Task</button>
+            </div>
+            <!-- Task List -->
+            <ul id="task-list"></ul>
+        </main>
+    </div>
+
+    <script src="script.mjs"></script>
+</body>
+</html>
